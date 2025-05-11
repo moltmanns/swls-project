@@ -4,14 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import {
-  Home,
-  Book,
-  Calendar,
-  Newspaper,
-  Users,
-  Lock,
-  Menu,
-  X,
+  Home, Book, Calendar, Newspaper, Users, Lock, ChevronRight
 } from 'lucide-react'
 import { useUser } from '@clerk/nextjs'
 import clsx from 'clsx'
@@ -20,11 +13,11 @@ import { Button } from '@/components/ui/button'
 export default function Sidebar() {
   const pathname = usePathname()
   const { user } = useUser()
-  const [isMobileOpen, setIsMobileOpen] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(true)
   const [isDesktop, setIsDesktop] = useState(true)
 
   useEffect(() => {
-    const handleResize = () => setIsDesktop(window.innerWidth >= 768)
+    const handleResize = () => setIsDesktop(window.innerWidth > 1024)
     handleResize()
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
@@ -46,72 +39,87 @@ export default function Sidebar() {
 
   const links = user ? [...navLinks, ...staffLinks] : navLinks
 
-  const Nav = () => (
-    <div className="flex flex-col h-full bg-[#263C85] text-white w-64 p-8 pt-20 md:pt-20">
-      {/* Sidebar brand header */}
-      <div className="flex justify-between items-center mb-6">
-
-        {!isDesktop && (
-          <button onClick={() => setIsMobileOpen(false)}>
-            <X className="text-white" />
-          </button>
-        )}
-      </div>
-
-        <Link href="/directory" className="mb-12 mt-2">
-        <Button
-            className="w-full py-5 bg-gradient-to-b from-[#80F445] to-[#6AB246] text-[#0F0F0F] font-semibold cursor-pointer transition-all duration-200 hover:from-[#58C431] hover:to-[#4A9632]"
-        >
-            Library Directory
-        </Button>
-        </Link>
-
-
-      {/* Nav Links */}
-      <ul className="space-y-4 flex-1">
-        {links.map(({ label, href, icon: Icon }) => (
-          <li key={href}>
-            <Link
-              href={href}
-              className={clsx(
-                'flex items-center gap-3 px-3 py-2 rounded-md hover:text-[#FCB316] transition text-[13px]',
-                pathname === href && 'bg-white/10'
-              )}
-              onClick={() => !isDesktop && setIsMobileOpen(false)}
-            >
-              <Icon size={18} />
-              <span>{label}</span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-
-      {/* Footer */}
-      <div className="pt-4 border-t border-white/10">
-        <p className="text-xs text-white/60 mt-2">© 2025 SWLS</p>
-      </div>
-    </div>
-  )
-
   return (
     <>
-      {/* Desktop Sidebar - fixed so Navbar overlays it */}
-      <div className="fixed top-0 left-0 h-screen w-64 hidden md:block bg-[#263C85] z-40">
-        {Nav()}
-      </div>
+      {/* DESKTOP SIDEBAR */}
+      {isDesktop ? (
+        <div className="fixed top-0 left-0 h-screen w-64 bg-[#263C85] z-40 hidden lg:block">
+          <div className="flex flex-col h-full p-8 pt-26 text-white">
+            <Link href="/pages/directory" className="mb-12 mt-2">
+              <Button className="w-full py-5 bg-gradient-to-b from-[#80F445] to-[#6AB246] text-[#0F0F0F] font-semibold hover:from-[#58C431] hover:to-[#4A9632]">
+                Library Directory
+              </Button>
+            </Link>
+            <ul className="space-y-4 flex-1">
+              {links.map(({ label, href, icon: Icon }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className={clsx(
+                      'flex items-center gap-3 px-3 py-2 rounded-md hover:text-[#FCB316] transition text-[13px]',
+                      pathname === href && 'bg-white/10'
+                    )}
+                  >
+                    <Icon size={18} />
+                    <span>{label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="pt-4 border-t border-white/10 text-xs text-white/60 mt-2">
+              © 2025 SWLS
+            </div>
+          </div>
+        </div>
+      ) : (
+        // MOBILE SIDEBAR
+        <div
+          className="fixed top-[93px] left-0 z-40 h-[calc(100vh-93px)] flex flex-col bg-[#263C85] text-white transition-all duration-300 ease-in-out"
+          style={{ width: isCollapsed ? '56px' : '256px' }}
+        >
+          {/* Toggle Button */}
+          <div className="flex justify-end p-2 pt-4">
+            <button
+              onClick={() => setIsCollapsed(!isCollapsed)}
+              className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"
+            >
+              <ChevronRight
+                size={20}
+                className={clsx('transition-transform', !isCollapsed && 'rotate-180')}
+              />
+            </button>
+          </div>
 
-      {/* Mobile Toggle Button */}
-      <button
-        onClick={() => setIsMobileOpen(true)}
-        className="absolute top-4 left-4 z-50 p-2 md:hidden bg-white border rounded shadow"
-      >
-        <Menu />
-      </button>
+          {/* Directory Button on expanded only */}
+          {!isCollapsed && (
+            <div className="px-2 mt-4 mb-6">
+              <Link href="/pages/directory">
+                <Button className="w-full py-4 text-[#0F0F0F] font-semibold bg-gradient-to-b from-[#80F445] to-[#6AB246] hover:from-[#58C431] hover:to-[#4A9632]">
+                  Library Directory
+                </Button>
+              </Link>
+            </div>
+          )}
 
-      {/* Mobile Sidebar Drawer */}
-      {isMobileOpen && (
-        <div className="fixed inset-0 z-50 bg-black/50 md:hidden">
-          <div className="absolute left-0 top-0 h-full">{Nav()}</div>
+          {/* Navigation Links */}
+          <ul className={clsx('mt-4 flex-1 overflow-auto', isCollapsed ? 'items-center' : 'px-3')}>
+            {links.map(({ label, href, icon: Icon }) => (
+              <li key={href} className="mb-4">
+                <Link
+                  href={href}
+                  onClick={() => setIsCollapsed(true)}
+                  className={clsx(
+                    'flex items-center gap-3 p-2 rounded-md hover:text-[#FCB316] transition',
+                    pathname === href && 'bg-white/10',
+                    isCollapsed && 'justify-center'
+                  )}
+                >
+                  <Icon size={20} />
+                  {!isCollapsed && <span className="text-sm">{label}</span>}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </>

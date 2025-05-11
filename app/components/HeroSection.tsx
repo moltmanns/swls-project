@@ -18,7 +18,7 @@ export default function HeroSection() {
               <span className="text-2xl block font-medium mb-3">Welcome!</span>
               Get Started with your<br /> Local Library
             </h1>
-          <Link href="/directory">
+          <Link href="/pages/directory">
             <button className="mt-12 px-6 py-3 rounded-md bg-gradient-to-b from-[#80F445] to-[#6AB246] text-[#0F0F0F] cursor-pointer transition-all duration-200 hover:from-[#58C431] hover:to-[#4A9632] text-sm font-medium">
               Find My Library →
             </button>

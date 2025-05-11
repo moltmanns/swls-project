@@ -1,0 +1,241 @@
+[
+  {
+    "name": "Argyle Public Library",
+    "website": "http://argylepubliclibrary.com",
+    "code": "ARGY",
+    "phone": "608 543 3193",
+    "county": "Lafayette County",
+    "hours": "M-W 2-6; Th-Sa 9-1"
+  },
+  {
+    "name": "Barneveld Public Library",
+    "website": "http://barneveldpubliclibrary.org/",
+    "code": "BARNE",
+    "phone": "608 924 3711",
+    "county": "Iowa County",
+    "hours": "M-Th 10-1, 3-6; F 10-1"
+  },
+  {
+    "name": "John Turgeson Public Library",
+    "website": "https://www.belmontwi.com/library/",
+    "code": "BELMO",
+    "phone": "608 762 5137",
+    "county": "Lafayette County",
+    "hours": "M 1-6:30; W 8:30-12, 1-6:30; F 1-6:30;"
+  },
+  {
+    "name": "Benton Public Library",
+    "website": "https://bentonpubliclibrary.wordpress.com/",
+    "code": "BENTO",
+    "phone": "608 759 2665",
+    "county": "Lafayette County",
+    "hours": "M 1-8; T-W-Th 1-6; F 9-12; Sa 9-2"
+  },
+  {
+    "name": "Blanchardville Public LIbrary",
+    "website": "http://blanchardville.com/village-government/blanchardville-public-library/",
+    "code": "BLANC",
+    "phone": "608 523 2055",
+    "county": "Lafayette County",
+    "hours": "M 9:15-2; W 9:15\u20114; Th 12-4"
+  },
+  {
+    "name": "Bloomington Public Library",
+    "website": "https://swls.agverso.com/home?cid=swls&lid=bloom",
+    "code": "BLOOM",
+    "phone": "608 994 2531",
+    "county": "Grant County",
+    "hours": "M 9-4; W 9-4:30; F 9\u20111"
+  },
+  {
+    "name": "Boscobel Public Library",
+    "website": "https://boscobelwisconsin.com/community-life/library/",
+    "code": "BOSCO",
+    "phone": "608 375 5723",
+    "county": "Grant County",
+    "hours": "M, W 9-6; T, Th 12-6; F 10-5; Sa 9-1"
+  },
+  {
+    "name": "Eckstein Memorial Library",
+    "website": "https://ecksteinmemoriallibrary.wordpress.com/",
+    "code": "CASSV",
+    "phone": "608 725 5838",
+    "county": "Grant County",
+    "hours": "M, Th 10-5; W 11-7; Sa: 9-12"
+  },
+  {
+    "name": "Cobb Public Library",
+    "website": "http://cobbplwi.wordpress.com/",
+    "code": "COBB",
+    "phone": "608 623 2554",
+    "county": "Iowa County",
+    "hours": "M, W 4-7; T, Th 9:30-5:30; Sa: 9:30\u201112:30"
+  },
+  {
+    "name": "Cuba City Public Library",
+    "website": "http://cubacitylibrary.wordpress.com/",
+    "code": "CUBA",
+    "phone": "608 744 2613",
+    "county": "Grant County",
+    "hours": "M, W 10-11:30, 1-6;  T, Th, F 10-11:30, 1-4:30"
+  },
+  {
+    "name": "Johnson Public Library",
+    "website": "https://darlingtonwi.org/johnson-public-library/",
+    "code": "DARL",
+    "phone": "608 776 4171",
+    "county": "Lafayette County",
+    "hours": "M, Th 10-7; Tu, W 10-5; F 10-5; Sa 10-2"
+  },
+  {
+    "name": "Brickl Memorial Library",
+    "website": "https://www.dickeyville.com/brickl-memorial-library",
+    "code": "DICK",
+    "phone": "608 568 3142",
+    "county": "Grant County",
+    "hours": "M-Th 12:30-6; Sa 9-12"
+  },
+  {
+    "name": "Dodgeville Public Library",
+    "website": "http://dodgevillelibrary.com/",
+    "code": "DODG",
+    "phone": "608 935 3728",
+    "county": "Iowa County",
+    "hours": "M-F 10-6"
+  },
+  {
+    "name": "Dwight Parker Public Library",
+    "website": "https://fennimore.com/community-life/public-library/",
+    "phone": "608 822 6294",
+    "county": "Grant County",
+    "hours": "M, W 9-6; Tu, Th 12-6; F 9-4; Sa 9-12"
+  },
+  {
+    "name": "Gays Mills Public Library",
+    "website": "http://www.gaysmillslibrary.org/",
+    "code": "GAYS",
+    "phone": "608 735 4331",
+    "county": "Crawford County",
+    "hours": "M, Tu, Th 2-7; W 9-2; F 1-5; Sa 9-12"
+  },
+  {
+    "name": "Gratiot Annex Library",
+    "website": "https://mccoypubliclibrary.wordpress.com/gratiot-annex-library/",
+    "code": "GRAT",
+    "phone": "608 922 3803",
+    "county": "Lafayette County",
+    "hours": "T, W, Th 12-6; Sa (2nd & 4th) 9-12"
+  },
+  {
+    "name": "Hazel Green Public Library",
+    "website": "http://www.hazelgreenpubliclibrary.org/",
+    "code": "HAZE",
+    "phone": "608 854 2952",
+    "county": "Grant County",
+    "hours": "M, W, Th, F 10-6; T 12-8; Sa 9-1"
+  },
+  {
+    "name": "Schreiner Memorial Library",
+    "website": "http://schreinermemoriallibrary.wordpress.com",
+    "code": "LANC",
+    "phone": "608 723 7304",
+    "county": "Grant County",
+    "hours": "M-Th 9-8; F 9-5; Sa 9-1"
+  },
+  {
+    "name": "Allen-Dietzman Public Library",
+    "website": "https://allendietzmanpubliclibrary.wordpress.com/",
+    "code": "LIVI",
+    "phone": "608 943 6801",
+    "county": "Grant County",
+    "hours": "M 1-6; W 12:30-7:30; Th 9-12; Winter hours (Oct-May): Sa: 9-12"
+  },
+  {
+    "name": "Lone Rock Community Library",
+    "website": "http://lonerocklibrary.wordpress.com/",
+    "code": "LONE",
+    "phone": "608 583 2034",
+    "county": "Richland County",
+    "hours": "M, T 11-6; Th 9-3"
+  },
+  {
+    "name": "Mineral Point Public Library",
+    "website": "http://mineralpointpubliclibrary.wordpress.com/",
+    "code": "MINE",
+    "phone": "608 987 2447",
+    "county": "Iowa County",
+    "hours": "M-W, F 10:30-5:30; Th 10-8; Sa 10-4"
+  },
+  {
+    "name": "Montfort Public Library",
+    "website": "https://montfortlibrary.wixsite.com/my-site",
+    "code": "MONTF",
+    "phone": "608 943 6265",
+    "county": "Grant County",
+    "hours": "M, T 11-5; W, Th 9-3; Sa 9-12"
+  },
+  {
+    "name": "Muscoda Public Library",
+    "website": "http://muscodapubliclibrary.wordpress.com/",
+    "code": "MUSC",
+    "phone": "608 739 3510",
+    "county": "Grant County",
+    "hours": "M, W 10-7; T, Th, F 10-5; Sa 10-1"
+  },
+  {
+    "name": "Platteville Public Library",
+    "website": "http://www.plattevillepubliclibrary.org/",
+    "code": "PLATT",
+    "phone": "608 348 7441",
+    "county": "Grant County",
+    "hours": "M-Th 10-7; F 10-6; Sa 10-3"
+  },
+  {
+    "name": "Potosi Branch Library",
+    "website": "http://potosibranchlibrary.wordpress.com/",
+    "code": "POTO",
+    "phone": "608 763 2115",
+    "county": "Grant County",
+    "hours": "M, F: Closed; T, Th: 3-8; W: 10-1; Sa: 9-1"
+  },
+  {
+    "name": "Prairie du Chien Memorial Library",
+    "website": "http://www.pdcpubliclibrary.org/",
+    "code": "PRAIR",
+    "phone": "608 326 6211",
+    "county": "Crawford County",
+    "hours": "M-Th 9-7; F 9-5"
+  },
+  {
+    "name": "Brewer Public Library",
+    "website": "https://brewerpubliclibrary.wordpress.com/",
+    "code": "RICHL",
+    "phone": "608 647 6444",
+    "county": "Richland County",
+    "hours": "M, Tu, Th, F 9-5; W 9-6; Sa 10-2"
+  },
+  {
+    "name": "McCoy Public Library",
+    "website": "https://mccoypubliclibrary.wordpress.com",
+    "code": "SHUL",
+    "phone": "608 965 4424",
+    "county": "Lafayette County",
+    "hours": "Tu, W, Th 12-6; Sa 9-12"
+  },
+  {
+    "name": "Soldiers Grove Public Library",
+    "website": "http://soldiersgrovelibrary.org/",
+    "code": "SOLD",
+    "phone": "608 624 5815",
+    "county": "Crawford County",
+    "hours": "M, W 1-5:30; T, Th 10-7; F, Sa 10\u20111"
+  },
+  {
+    "name": "Viola Public Library",
+    "website": "http://violapubliclibrary.wordpress.com",
+    "code": "VIOLA",
+    "phone": "608 627 1850",
+    "county": "Richland County",
+    "hours": "M: Closed; T, Th: 9:30-12:30, 1-5; W, F: 2-7; Sa: 9:30-12:30"
+  }
+]
