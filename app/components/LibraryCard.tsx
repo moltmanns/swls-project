@@ -21,12 +21,6 @@ export default function LibraryCard({
   phone,
   hours,
 }: Props) {
-  const formattedHours = hours.split(';').map((line, i) => (
-    <div key={i} className="text-sm text-gray-600">
-      {line.trim()}
-    </div>
-  ))
-
   return (
     <Link
       href={website}
@@ -49,7 +43,9 @@ export default function LibraryCard({
         </h3>
         <div className="text-sm text-gray-700">{county}</div>
         <div className="text-sm text-gray-700">📞 {phone}</div>
-        {formattedHours}
+        <div className="text-sm text-gray-600 whitespace-normal">
+          {hours}
+        </div>
         <div className="flex justify-end pt-2">
           <ArrowRight className="h-4 w-4 text-blue-500" />
         </div>

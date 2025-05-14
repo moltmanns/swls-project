@@ -25,16 +25,16 @@ export default function Sidebar() {
 
   const navLinks = [
     { label: 'Home', href: '/', icon: Home },
-    { label: 'About SWLS', href: '/about', icon: Home },
-    { label: 'Databases & More', href: '/databases', icon: Home },
-    { label: 'Library Catalog', href: '/catalog', icon: Book },
-    { label: 'Events & Programs', href: '/events', icon: Calendar },
-    { label: 'News & Articles', href: '/news', icon: Newspaper },
+    { label: 'About SWLS', href: '/pages/about', icon: Home },
+    { label: 'Databases & More', href: '/pages/databases', icon: Home },
+    { label: 'Library Catalog', href: '/pages/catalog', icon: Book },
+    { label: 'Events & Programs', href: '/pages/events', icon: Calendar },
+    { label: 'News & Articles', href: '/pages/news', icon: Newspaper },
   ]
 
   const staffLinks = [
-    { label: 'Staff Portal', href: '/staff', icon: Users },
-    { label: 'Admin Tools', href: '/admin', icon: Lock },
+    { label: 'Staff Portal', href: '/pages/staff', icon: Users },
+    { label: 'Admin Tools', href: '/pages/admin', icon: Lock },
   ]
 
   const links = user ? [...navLinks, ...staffLinks] : navLinks
