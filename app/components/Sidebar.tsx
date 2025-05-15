@@ -36,6 +36,7 @@ export default function Sidebar() {
     { label: 'Staff Portal', href: '/pages/staff', icon: Users },
     { label: 'Admin Tools', href: '/pages/admin', icon: Lock },
   ]
+  
 
   const links = user ? [...navLinks, ...staffLinks] : navLinks
 
@@ -46,7 +47,7 @@ export default function Sidebar() {
         <div className="fixed top-0 left-0 h-screen w-64 bg-[#263C85] z-40 hidden lg:block">
           <div className="flex flex-col h-full p-8 pt-26 text-white">
             <Link href="/pages/directory" className="mb-12 mt-2">
-              <Button className="w-full py-5 bg-gradient-to-b from-[#80F445] to-[#6AB246] text-[#0F0F0F] font-semibold hover:from-[#58C431] hover:to-[#4A9632]">
+              <Button className="w-full py-5 bg-gradient-to-b from-[#80F445] to-[#6AB246] text-[#0F0F0F] font-semibold hover:from-[#58C431] hover:to-[#4A9632] cursor-pointer">
                 Library Directory
               </Button>
             </Link>
